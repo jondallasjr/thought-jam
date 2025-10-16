@@ -1,0 +1,891 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Events</title><style>/* Thought Jam - Social Philosophy Forum - Page CSS */
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid;
+}
+
+.btn-primary {
+  background-color: #e91e63;
+  color: #fff;
+  border-color: #e91e63;
+}
+
+.btn-primary:hover {
+  background-color: #c2185b;
+  border-color: #c2185b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #1a1a2e;
+}
+
+.btn-secondary-light {
+  background-color: transparent;
+  color: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+.btn-secondary-light:hover {
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: #e91e63;
+  padding: 0;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-text:hover {
+  transform: translateX(10px);
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+}
+
+section h2 {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+/* Philosophy For Everyone Section */
+.philosophy-for-everyone {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy-for-everyone h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.philosophy-for-everyone p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Mission Statement */
+.mission-statement {
+  background-color: #fff;
+  text-align: center;
+}
+
+.mission-text {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #2c2c2c;
+  font-weight: 400;
+}
+
+/* Vibe Grid */
+.the-vibe {
+  background-color: #f8f8f8;
+}
+
+.vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.vibe-card {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-left: 6px solid #e91e63;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.vibe-card:hover {
+  transform: translateX(10px);
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vibe-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e91e63;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.vibe-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.vibe-card p {
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* Overcoming Barriers Section */
+.overcoming-barriers {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: left;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.overcoming-barriers h2 {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.overcoming-barriers p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Gallery Preview */
+.gallery-preview {
+  background-color: #fff;
+  text-align: center;
+}
+
+.image-grid-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%);
+}
+
+.image-card:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0%);
+}
+
+/* Testimonials Preview */
+.testimonials-preview {
+  background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 50%, #8e24aa 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.testimonials-preview h2 {
+  color: #fff;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2.5rem 2rem;
+  border-left: 5px solid #e91e63;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testimonial cite {
+  display: block;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CTA Final */
+.cta-final {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.cta-final h2 {
+  margin-bottom: 1.5rem;
+}
+
+.cta-final p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .vibe-grid,
+  .image-grid-large,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-text,
+  .philosophy-for-everyone p,
+  .overcoming-barriers p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
+  
+  .hero-description {
+    font-size: 1.05rem;
+  }
+  
+  section {
+    padding: 60px 20px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Events - Page CSS */
+/* Events Page Specific Styles */
+
+.events-hero {
+  min-height: 80vh;
+}
+
+/* What to Expect Section */
+.what-to-expect {
+  background-color: #fff;
+}
+
+.expect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.expect-card {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-left: 6px solid #e91e63;
+  transition: all 0.3s ease;
+}
+
+.expect-card:hover {
+  transform: translateX(10px);
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.expect-icon {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e91e63;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.expect-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.expect-card p {
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* Topics Explored Section */
+.topics-explored {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.topics-explored h2 {
+  color: #fff;
+}
+
+.topics-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.topics-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topic-tag {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.topic-tag:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #e91e63;
+  transform: scale(1.05);
+}
+
+.topics-btn {
+  margin-top: 1rem;
+}
+
+/* Global Presence Section */
+.global-presence {
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.global-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #555;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.city-card {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-top: 5px solid #e91e63;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.city-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.city-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Event Quick Links */
+.event-quick-links {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 80px 20px;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.quick-link-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4rem 3rem;
+  border-left: 6px solid #e91e63;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 250px;
+}
+
+.quick-link-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(10px);
+}
+
+.quick-link-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.quick-link-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.link-arrow {
+  font-size: 3rem;
+  color: #e91e63;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover .link-arrow {
+  transform: translateX(15px);
+}
+
+/* Event Guidelines Section */
+.event-guidelines {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.event-guidelines h2 {
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.guideline-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 2rem;
+  border-left: 4px solid #e91e63;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.guideline-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.guideline-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.guideline-item p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .expect-grid,
+  .cities-grid,
+  .quick-links-grid,
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .topics-tags {
+    gap: 0.75rem;
+  }
+  
+  .topic-tag {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+  
+  .quick-link-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .topics-intro,
+  .global-intro {
+    font-size: 1.1rem;
+  }
+  
+  .quick-link-card {
+    padding: 3rem 2rem;
+    min-height: 200px;
+  }
+  
+  .quick-link-content h2 {
+    font-size: 2rem;
+  }
+  
+  .link-arrow {
+    font-size: 2rem;
+    bottom: 2rem;
+    right: 2rem;
+  }
+}</style></head><body><section class="events-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-D_slLRNTWk/174b4fa053142ba6cf4fa4f945a34218660bb7fea8e250cbf0f19fb9fa59c988861312f722886054d1024832dbd540fb6fd1bd986c7f5a94b982709d8e83882b18d9c0a7f0ccf2aea6de62600ecaadb3933e12d0831a9cfd895ab0dff965d2caa72b1310');">
+  <div class="hero-content">
+    <h1>Events</h1>
+    <p class="hero-description">Where ideas collide, perspectives shift, and strangers become collaborators. Join us for an unforgettable evening of philosophy, art, and connection.</p>
+    <div class="hero-cta">
+      <a href="/thought-jam/eventsupcoming" class="btn btn-primary">View Upcoming Events</a>
+      <a href="/thought-jam/eventspast" class="btn btn-secondary">Browse Past Events</a>
+    </div>
+  </div>
+</section>
+
+<section class="what-to-expect">
+  <div class="container">
+    <h2>What to Expect</h2>
+    <div class="expect-grid">
+      <div class="expect-card">
+        <div class="expect-icon">01</div>
+        <h3>Arrive & Connect</h3>
+        <p>Step into an atmosphere where underground art gallery meets philosophical salon. Grab a themed drink, admire the artwork, and meet fellow curious minds.</p>
+      </div>
+      <div class="expect-card">
+        <div class="expect-icon">02</div>
+        <h3>Opening Talk</h3>
+        <p>Our facilitator presents the evening's topic with an impartial, engaging lecture that explores all perspectives. No preaching, just context.</p>
+      </div>
+      <div class="expect-card">
+        <div class="expect-icon">03</div>
+        <h3>Small Group Discussion</h3>
+        <p>Break into intimate groups for guided conversations. This is where the magic happens - deep dialogue with diverse viewpoints.</p>
+      </div>
+      <div class="expect-card">
+        <div class="expect-icon">04</div>
+        <h3>Interactive Elements</h3>
+        <p>Games, live performances, panel Q&As, or artistic expressions that complement the discussion and keep energy high.</p>
+      </div>
+      <div class="expect-card">
+        <div class="expect-icon">05</div>
+        <h3>Open Networking</h3>
+        <p>Continue conversations over drinks and music. Many attendees leave with new friends and shifted perspectives.</p>
+      </div>
+      <div class="expect-card">
+        <div class="expect-icon">06</div>
+        <h3>Take It With You</h3>
+        <p>Walk away with new insights, connections, and often a fundamentally different understanding of the issue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="topics-explored" style="background-image: linear-gradient(rgba(138, 43, 226, 0.92), rgba(75, 0, 130, 0.92)), url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-nKtZOsp8M1/64d543157581c431c08c57035f43b6da0c2ed54d4210ba98db23c6960c24d836e5d7ab3f832542a64234aaa970767331de2228f7c7e13e7c58b6ed3f47530896ffd4409808ddd5abcc6b53390e580d4229b8b930cb13aad872d7050f655ca8611e019c40');">
+  <div class="container">
+    <h2>Topics We Explore</h2>
+    <p class="topics-intro">We tackle the issues that divide us. No topic is too controversial, no perspective too fringe. From consciousness to polyamory, from toxic masculinity to antinatalism, we create space for every voice.</p>
+    <div class="topics-tags">
+      <span class="topic-tag">Polyamory</span>
+      <span class="topic-tag">Toxic Masculinity</span>
+      <span class="topic-tag">Sex Work</span>
+      <span class="topic-tag">Cultural Appropriation</span>
+      <span class="topic-tag">Consciousness</span>
+      <span class="topic-tag">Free Will</span>
+      <span class="topic-tag">Comedy Ethics</span>
+      <span class="topic-tag">Conspiracy Theories</span>
+      <span class="topic-tag">Artificial Intelligence</span>
+      <span class="topic-tag">Psychedelics</span>
+      <span class="topic-tag">Antinatalism</span>
+      <span class="topic-tag">Sexual Orientation</span>
+      <span class="topic-tag">Dating & Consent</span>
+      <span class="topic-tag">East vs West Psychology</span>
+    </div>
+    <a href="/thought-jam/topics" class="btn btn-secondary topics-btn">Explore All Topics</a>
+  </div>
+</section>
+
+<section class="global-presence">
+  <div class="container">
+    <h2>Where We Gather</h2>
+    <p class="global-intro">From Asia to Africa, from online to in-person, Thought Jam brings deep dialogue to communities worldwide.</p>
+    <div class="cities-grid">
+      <div class="city-card">
+        <h3>Hanoi, Vietnam</h3>
+        <p>Where it all began. Our longest-running chapter.</p>
+      </div>
+      <div class="city-card">
+        <h3>Harare, Zimbabwe</h3>
+        <p>Bridging African perspectives with global dialogue.</p>
+      </div>
+      <div class="city-card">
+        <h3>Chiang Mai, Thailand</h3>
+        <p>Southeast Asia's hub for digital nomads and thinkers.</p>
+      </div>
+      <div class="city-card">
+        <h3>Singapore</h3>
+        <p>Multicultural crossroads of East and West.</p>
+      </div>
+      <div class="city-card">
+        <h3>Da Nang, Vietnam</h3>
+        <p>Coastal conversations with ocean views.</p>
+      </div>
+      <div class="city-card">
+        <h3>Bali, Indonesia</h3>
+        <p>Island wisdom meets philosophical inquiry.</p>
+      </div>
+      <div class="city-card">
+        <h3>Online</h3>
+        <p>Connecting global thinkers from anywhere.</p>
+      </div>
+      <div class="city-card">
+        <h3>Your City?</h3>
+        <p>Want to bring Thought Jam to your community?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="event-quick-links">
+  <div class="container">
+    <div class="quick-links-grid">
+      <a href="/thought-jam/eventsupcoming" class="quick-link-card upcoming">
+        <div class="quick-link-content">
+          <h2>Upcoming Events</h2>
+          <p>See what's coming next and reserve your spot</p>
+          <span class="link-arrow">→</span>
+        </div>
+      </a>
+      <a href="/thought-jam/eventspast" class="quick-link-card past">
+        <div class="quick-link-content">
+          <h2>Past Events</h2>
+          <p>Explore our archive of 239+ events across the globe</p>
+          <span class="link-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="event-guidelines" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-_OxFn4elgj/b7704fad851ecf5029407f1e379c600fbed14627f122aeb0e2e84ce68eb4a4c8dec214b4cdf6f4eb518b27a5a1d2797afb7c313655aac5ceab7964f011fde45844d2e3d117731502b00cab82817c6145b44995d330649849a0f42c8fc72348f185e50a18');">
+  <div class="container">
+    <h2>Our Conversation Guidelines</h2>
+    <div class="guidelines-grid">
+      <div class="guideline-item">
+        <h3>All Ideas Welcome</h3>
+        <p>Fringe, religious, taboo - we explore the full spectrum.</p>
+      </div>
+      <div class="guideline-item">
+        <h3>Share the Air</h3>
+        <p>Listen as much as you speak. Your silence has value.</p>
+      </div>
+      <div class="guideline-item">
+        <h3>Learn, Don't Win</h3>
+        <p>Understanding beats being right. Changing your mind is growth.</p>
+      </div>
+      <div class="guideline-item">
+        <h3>Curiosity Over Judgment</h3>
+        <p>Ask questions, don't make assumptions.</p>
+      </div>
+      <div class="guideline-item">
+        <h3>Disagree Respectfully</h3>
+        <p>Challenge ideas, not people. Use "I" statements.</p>
+      </div>
+      <div class="guideline-item">
+        <h3>Assume Good Intent</h3>
+        <p>Engage with the best interpretation of others' views.</p>
+      </div>
+    </div>
+    <a href="/thought-jam/aboutguidelines" class="btn btn-secondary">Read Full Guidelines</a>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <h2>Join the Next Event</h2>
+    <p>Experience philosophy like never before. Attend an event and discover why thousands keep coming back.</p>
+    <div class="cta-buttons">
+      <a href="/thought-jam/eventsupcoming" class="btn btn-primary">Find an Event</a>
+      <a href="/thought-jam/newsletter" class="btn btn-secondary-light">Get Event Alerts</a>
+      <a href="/thought-jam/get-involvedhost" class="btn btn-secondary-light">Host in Your City</a>
+    </div>
+  </div>
+</section></body></html>
