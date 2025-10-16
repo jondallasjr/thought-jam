@@ -1,0 +1,882 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Core Values</title><style>/* About Thought Jam - Page CSS */
+/* About Page Specific Styles */
+
+.about-hero {
+  min-height: 70vh;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  background-color: #fff;
+  padding: 100px 20px;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 4rem;
+}
+
+.mission-vision-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #e91e63;
+  text-align: left;
+}
+
+.mission-vision-card p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #2c2c2c;
+}
+
+/* Our Story Section */
+.our-story {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.our-story h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.story-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.story-lead {
+  font-size: 1.4rem;
+  line-height: 1.9;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.story-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 2rem;
+  border-left: 5px solid #e91e63;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.timeline-marker {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #e91e63;
+  margin-bottom: 1rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.timeline-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* By Numbers Section */
+.by-numbers {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.by-numbers h2 {
+  color: #fff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+}
+
+.stat-card {
+  padding: 2rem;
+}
+
+.stat-number {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #e91e63;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* Core Values Section */
+.core-values {
+  background-color: #f8f8f8;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.value-card {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-left: 6px solid #e91e63;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateX(10px);
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e91e63;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.value-card p {
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* What Makes Us Different */
+.what-makes-us-different {
+  background-color: #fff;
+}
+
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.difference-item {
+  text-align: center;
+}
+
+.difference-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #e91e63;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.difference-item p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Deep Dive Links */
+.deep-dive-links {
+  background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 50%, #8e24aa 100%);
+  color: #fff;
+}
+
+.deep-dive-links h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.link-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2.5rem 2rem;
+  border-left: 5px solid #e91e63;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-5px);
+}
+
+.link-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.link-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.link-arrow {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  color: #e91e63;
+  transition: transform 0.3s ease;
+}
+
+.link-card:hover .link-arrow {
+  transform: translateX(10px);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-vision-card h2 {
+    font-size: 2rem;
+  }
+  
+  .story-timeline {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-number {
+    font-size: 4rem;
+  }
+  
+  .values-grid,
+  .difference-grid,
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .mission-vision-card p,
+  .story-lead {
+    font-size: 1.05rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+  }
+  
+  .timeline-marker {
+    font-size: 2rem;
+  }
+}
+
+/* Thought Jam - Social Philosophy Forum - Page CSS */
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid;
+}
+
+.btn-primary {
+  background-color: #e91e63;
+  color: #fff;
+  border-color: #e91e63;
+}
+
+.btn-primary:hover {
+  background-color: #c2185b;
+  border-color: #c2185b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #1a1a2e;
+}
+
+.btn-secondary-light {
+  background-color: transparent;
+  color: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+.btn-secondary-light:hover {
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: #e91e63;
+  padding: 0;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-text:hover {
+  transform: translateX(10px);
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+}
+
+section h2 {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+/* Philosophy For Everyone Section */
+.philosophy-for-everyone {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy-for-everyone h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.philosophy-for-everyone p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Mission Statement */
+.mission-statement {
+  background-color: #fff;
+  text-align: center;
+}
+
+.mission-text {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #2c2c2c;
+  font-weight: 400;
+}
+
+/* Vibe Grid */
+.the-vibe {
+  background-color: #f8f8f8;
+}
+
+.vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.vibe-card {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-left: 6px solid #e91e63;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.vibe-card:hover {
+  transform: translateX(10px);
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vibe-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e91e63;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.vibe-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.vibe-card p {
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* Overcoming Barriers Section */
+.overcoming-barriers {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: left;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.overcoming-barriers h2 {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.overcoming-barriers p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Gallery Preview */
+.gallery-preview {
+  background-color: #fff;
+  text-align: center;
+}
+
+.image-grid-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%);
+}
+
+.image-card:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0%);
+}
+
+/* Testimonials Preview */
+.testimonials-preview {
+  background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 50%, #8e24aa 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.testimonials-preview h2 {
+  color: #fff;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2.5rem 2rem;
+  border-left: 5px solid #e91e63;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testimonial cite {
+  display: block;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CTA Final */
+.cta-final {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.cta-final h2 {
+  margin-bottom: 1.5rem;
+}
+
+.cta-final p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .vibe-grid,
+  .image-grid-large,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-text,
+  .philosophy-for-everyone p,
+  .overcoming-barriers p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
+  
+  .hero-description {
+    font-size: 1.05rem;
+  }
+  
+  section {
+    padding: 60px 20px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Core Values - Page CSS */
+.values-intro {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #2c2c2c;
+  font-weight: 400;
+}
+
+.values-in-action {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+.values-in-action h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.action-description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 968px) {
+  .intro-text,
+  .action-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro-text,
+  .action-description {
+    font-size: 1.05rem;
+  }
+  
+  .values-intro {
+    padding: 60px 20px;
+  }
+}</style></head><body><section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-tLPF1Za9sL/dd5f4184adb1413de4449779963354c08f799dacbba5d428b3cd4385183b334428128f956c31641abcb4a6b0d8e406f107ea7e5e1dccc0f77cf7fcad45d927b8b45058a88d7f6b5095a3e5a6d80b3691bc93a3cb61ec9109e0e1d8cb7b84b8c28b7e19f1');">
+  <div class="hero-content">
+    <h1>Core Values</h1>
+    <p class="hero-description">The principles that guide every conversation, every event, and every connection we foster.</p>
+  </div>
+</section>
+
+<section class="values-intro">
+  <div class="container">
+    <p class="intro-text">At Thought Jam, our core values are more than aspirational statements. They are the foundation of how we design our events, facilitate our discussions, and build our community. These eight principles create the conditions for meaningful dialogue that bridges divides and transforms understanding.</p>
+  </div>
+</section>
+
+<section class="core-values">
+  <div class="container">
+    <h2>Our Eight Guiding Principles</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">01</div>
+        <h3>Non-Judgment</h3>
+        <p>We create safe spaces for free expression of ideas. By suspending judgment, we allow for the exploration of diverse thoughts without fear of ridicule or discrimination. This foundation enables honest dialogue where participants can voice unpopular or evolving opinions without defensive posturing.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">02</div>
+        <h3>Curiosity</h3>
+        <p>We nurture a spirit of inquiry and continuous learning. By encouraging questions and exploration, we foster an environment where intellectual growth flourishes. Curiosity transforms potential conflict into collaborative discovery, replacing the need to be right with the desire to understand.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">03</div>
+        <h3>Intellectual Humility and Empathy</h3>
+        <p>We encourage an open-minded approach to different perspectives. Recognizing our own limitations and striving to understand others' viewpoints are key to productive dialogue and personal growth. True wisdom begins with acknowledging how much we don't know.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">04</div>
+        <h3>Open and Constructive Dialogue</h3>
+        <p>We champion the power of respectful, open communication to bridge divides and view conflict as an opportunity for deeper understanding. By teaching the art of productive disagreement, we turn potential friction into a catalyst for creative problem-solving and mutual understanding.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">05</div>
+        <h3>Community Building</h3>
+        <p>We foster environments where diverse individuals connect through meaningful dialogue. Our events transform strangers into collaborators, creating a network of engaged thinkers who continue conversations long after our gatherings end.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">06</div>
+        <h3>Holistic Understanding</h3>
+        <p>We recognize that meaningful discussions incorporate various elements: scientific evidence, emotional intelligence, spiritual insights, and personal experiences. This multifaceted approach leads to richer, more nuanced understanding that transcends simplistic binary thinking.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">07</div>
+        <h3>Accessibility</h3>
+        <p>We make complex philosophical ideas relevant and understandable. By connecting abstract concepts to contemporary issues, we empower individuals to engage more deeply with the world around them, democratizing intellectual discourse beyond academic institutions.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">08</div>
+        <h3>Practicality</h3>
+        <p>We strive to bridge the gap between theoretical knowledge and real-world action. By encouraging the application of insights gained through dialogue, we aim to catalyze positive change in individuals and communities, transforming philosophy from abstract theory into lived experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-in-action" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-Ko_UYqRuy6/6a1aeb59c54dd11e9d0d920f4057454750a267dab61d02643e3c73b0492c4d017901761a1d5e689ec8c9f804f3b0a3975236e6681eed096191af3f8229f16ceba161fe8ee45b1ba393aa8cbab8e98bd92af7d410185ead4b24b7d2cb122ec189af9ae485');">
+  <div class="container">
+    <h2>Values in Action</h2>
+    <p class="action-description">These principles come alive in every aspect of our work. From the way we structure our small-group discussions to ensure every voice is heard, to the diverse multimedia formats we use to make philosophy accessible. Our values aren't just stated—they're practiced, tested, and refined through every conversation, in every city, with every new participant who joins our community.</p>
+  </div>
+</section>
+
+<section class="gallery-preview">
+  <div class="container">
+    <h2>Our Community Embodies These Values</h2>
+    <div class="image-grid-large">
+      <div class="image-card">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-07Hx5wekLg/5b03a425ed0c9365e635da6dc8d92b91acf30cdd724b9ff677b3d6de6e3fb49965e2662caaed88a2fc19dddc56ca6d7e2687b799674a4d81aad0e47fa2bada7021400b879d68628e1cec4dc1aaded08a93b0ce0c2908e27ffacfa4ce6fe19a832f3a4438" alt="Thought Jam community discussion in Harare">
+      </div>
+      <div class="image-card">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-pPgIPk8m80/c14778d803d6457ec59d2484226a9891574826c8fcf3576afec1c10623c1ec5c46b51226e762718b81bc6f1113a2a0fb0b030d45edc472119ce209828a0fb43c06e9a22ba05b962a351e21e1f7c95bf1398a4b2f846b9f830f2a6412ce6348711c94a386" alt="Participants engaged in dialogue">
+      </div>
+      <div class="image-card">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-E-qXs62uZX/077e9390da7fa9f5ae3f071c4a636264114a772406e9a89d58c7377874dbe3a43411da82de4c36de0661db04a90f24b11ea0e18d1cd73beb5823ef3fa21def662d59553a0b9deb1ad782f520513a3fbfa1da44759169d4fcdb2933e6e2723033efdeee65" alt="Community building through conversation">
+      </div>
+    </div>
+    <a href="/thought-jam/gallery" class="btn btn-secondary-light" style="margin-top: 3rem;">View Full Gallery</a>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <h2>Experience Our Values Firsthand</h2>
+    <p>The best way to understand our values is to see them in action. Join us at an upcoming event or explore our guidelines for healthy conversation.</p>
+    <div class="cta-buttons">
+      <a href="/thought-jam/events" class="btn btn-primary">Attend an Event</a>
+      <a href="/thought-jam/aboutguidelines" class="btn btn-secondary-light">Read Our Guidelines</a>
+    </div>
+  </div>
+</section></body></html>
