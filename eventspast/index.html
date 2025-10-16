@@ -1,0 +1,1261 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Past Events Archive</title><style>/* Events - Page CSS */
+/* Events Page Specific Styles */
+
+.events-hero {
+  min-height: 80vh;
+}
+
+/* What to Expect Section */
+.what-to-expect {
+  background-color: #fff;
+}
+
+.expect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+.expect-card {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-left: 6px solid #e91e63;
+  transition: all 0.3s ease;
+}
+
+.expect-card:hover {
+  transform: translateX(10px);
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.expect-icon {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e91e63;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.expect-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.expect-card p {
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* Topics Explored Section */
+.topics-explored {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.topics-explored h2 {
+  color: #fff;
+}
+
+.topics-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.topics-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topic-tag {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.topic-tag:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #e91e63;
+  transform: scale(1.05);
+}
+
+.topics-btn {
+  margin-top: 1rem;
+}
+
+/* Global Presence Section */
+.global-presence {
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.global-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #555;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.city-card {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-top: 5px solid #e91e63;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.city-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.city-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Event Quick Links */
+.event-quick-links {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 80px 20px;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.quick-link-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4rem 3rem;
+  border-left: 6px solid #e91e63;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 250px;
+}
+
+.quick-link-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(10px);
+}
+
+.quick-link-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.quick-link-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.link-arrow {
+  font-size: 3rem;
+  color: #e91e63;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover .link-arrow {
+  transform: translateX(15px);
+}
+
+/* Event Guidelines Section */
+.event-guidelines {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.event-guidelines h2 {
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.guideline-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 2rem;
+  border-left: 4px solid #e91e63;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.guideline-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.guideline-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.guideline-item p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .expect-grid,
+  .cities-grid,
+  .quick-links-grid,
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .topics-tags {
+    gap: 0.75rem;
+  }
+  
+  .topic-tag {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+  
+  .quick-link-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .topics-intro,
+  .global-intro {
+    font-size: 1.1rem;
+  }
+  
+  .quick-link-card {
+    padding: 3rem 2rem;
+    min-height: 200px;
+  }
+  
+  .quick-link-content h2 {
+    font-size: 2rem;
+  }
+  
+  .link-arrow {
+    font-size: 2rem;
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+
+/* Thought Jam - Social Philosophy Forum - Page CSS */
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid;
+}
+
+.btn-primary {
+  background-color: #e91e63;
+  color: #fff;
+  border-color: #e91e63;
+}
+
+.btn-primary:hover {
+  background-color: #c2185b;
+  border-color: #c2185b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #1a1a2e;
+}
+
+.btn-secondary-light {
+  background-color: transparent;
+  color: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+.btn-secondary-light:hover {
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: #e91e63;
+  padding: 0;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-text:hover {
+  transform: translateX(10px);
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+}
+
+section h2 {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+/* Philosophy For Everyone Section */
+.philosophy-for-everyone {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy-for-everyone h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.philosophy-for-everyone p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Mission Statement */
+.mission-statement {
+  background-color: #fff;
+  text-align: center;
+}
+
+.mission-text {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #2c2c2c;
+  font-weight: 400;
+}
+
+/* Vibe Grid */
+.the-vibe {
+  background-color: #f8f8f8;
+}
+
+.vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.vibe-card {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-left: 6px solid #e91e63;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.vibe-card:hover {
+  transform: translateX(10px);
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vibe-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e91e63;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.vibe-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.vibe-card p {
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* Overcoming Barriers Section */
+.overcoming-barriers {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: left;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.overcoming-barriers h2 {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.overcoming-barriers p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Gallery Preview */
+.gallery-preview {
+  background-color: #fff;
+  text-align: center;
+}
+
+.image-grid-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%);
+}
+
+.image-card:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0%);
+}
+
+/* Testimonials Preview */
+.testimonials-preview {
+  background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 50%, #8e24aa 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.testimonials-preview h2 {
+  color: #fff;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2.5rem 2rem;
+  border-left: 5px solid #e91e63;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testimonial cite {
+  display: block;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CTA Final */
+.cta-final {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.cta-final h2 {
+  margin-bottom: 1.5rem;
+}
+
+.cta-final p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .vibe-grid,
+  .image-grid-large,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-text,
+  .philosophy-for-everyone p,
+  .overcoming-barriers p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
+  
+  .hero-description {
+    font-size: 1.05rem;
+  }
+  
+  section {
+    padding: 60px 20px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Past Events Archive - Page CSS */
+/* Past Events Archive Specific Styles */
+
+.past-events-hero {
+  min-height: 85vh;
+}
+
+/* Impact Stats Section */
+.impact-stats {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 80px 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  text-align: center;
+  color: #fff;
+  padding: 2rem 1rem;
+  border-top: 4px solid #e91e63;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #e91e63;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+/* Visual Timeline Section */
+.visual-timeline {
+  background-color: #fff;
+  text-align: center;
+}
+
+.timeline-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  color: #555;
+}
+
+.timeline-grid {
+  display: grid;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) {
+  direction: rtl;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  direction: ltr;
+}
+
+.timeline-image {
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  border-left: 6px solid #e91e63;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-image {
+  transform: scale(1.02);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #e91e63;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.timeline-item p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Topics Archive Section */
+.topics-archive {
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.archive-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #555;
+}
+
+.topics-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.archive-topic {
+  background: #fff;
+  color: #1a1a2e;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-left: 4px solid #e91e63;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.archive-topic:hover {
+  background: #e91e63;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.3);
+}
+
+/* Cities Visited Section */
+.cities-visited {
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.cities-visited h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.cities-intro {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.cities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.city-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem 1.5rem;
+  border-left: 4px solid #e91e63;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.city-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(10px);
+}
+
+.city-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.city-item p {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Evolution Story Section */
+.evolution-story {
+  background-color: #fff;
+}
+
+.evolution-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.evolution-phase {
+  background: #f8f8f8;
+  padding: 3rem 2.5rem;
+  margin-bottom: 2rem;
+  border-left: 6px solid #e91e63;
+  transition: all 0.3s ease;
+}
+
+.evolution-phase:hover {
+  transform: translateX(10px);
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.evolution-phase h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.evolution-phase p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* Archive CTA Section */
+.archive-cta {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.archive-cta h2 {
+  margin-bottom: 1.5rem;
+}
+
+.archive-cta p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+  }
+  
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .timeline-item:nth-child(even) {
+    direction: ltr;
+  }
+  
+  .cities-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .impact-stats {
+    padding: 60px 20px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .timeline-intro,
+  .archive-intro,
+  .cities-intro {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .topics-cloud {
+    gap: 0.75rem;
+  }
+  
+  .archive-topic {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .cities-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .evolution-phase {
+    padding: 2rem 1.5rem;
+  }
+  
+  .evolution-phase h3 {
+    font-size: 1.4rem;
+  }
+}</style></head><body><section class="hero past-events-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-cxTpVEaATs/d9f89b805fc3b5881e0c41b8e2fd76e0659591d4a5ba0ae5d4c83e5a318457766dcffb64cb0f64bc513ecc4cbace387393b4a1879db73569e10599cf4c7205abf19e1c32ce2c178a5284426bb3ff5f16b22814e00990716b7365b36037a6348b18d601d7');">
+  <div class="hero-content">
+    <h1>Our Journey</h1>
+    <p class="hero-description">Since March 2017, we've hosted 239 events for 8,488 guests across 11 cities. From a humble book club in Hanoi to a global movement making philosophy accessible to everyone.</p>
+    <div class="hero-cta">
+      <a href="/thought-jam/eventsupcoming" class="btn btn-primary">Join Our Next Event</a>
+      <a href="/thought-jam/about" class="btn btn-secondary">Learn Our Story</a>
+    </div>
+  </div>
+</section>
+
+<section class="impact-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">239</div>
+        <div class="stat-label">Events Hosted</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">8,488</div>
+        <div class="stat-label">Guests Welcomed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">11</div>
+        <div class="stat-label">Cities Reached</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">8+</div>
+        <div class="stat-label">Years of Impact</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visual-timeline">
+  <div class="container">
+    <h2>Through the Years</h2>
+    <p class="timeline-intro">From our early days as the Hanoi Philosophy Forum to becoming Thought Jam, we've evolved from intimate book club discussions to immersive philosophical experiences combining art, music, and rigorous discourse.</p>
+    
+    <div class="timeline-grid">
+      <div class="timeline-item">
+        <div class="timeline-image" style="background-image: url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-MCG_KkHitl/86ef38fd894cd45d6586d4c078d80baf1457f9c97195cc8d30303ec79f603bed8fa37669a2c912244117d1dddc010344b49b5b32b3f4020d795a23c438cb33aaaa706dac7a017698735743f524a7b23e7cebfb05d4d369f65017223091505ac59ceb1d35');"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">May 2017</div>
+          <h3>The Beginning</h3>
+          <p>Our first events exploring philosophers like Albert Ellis, diving deep into philosophical texts in intimate settings.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-image" style="background-image: url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-uCnvSss6WN/c2187a1593717dfc97a7dd71e9848df1736b08abace5376fe668bd4943dcc1eecf2a3650bb2cd147c69e9e7e794d2a859b0a40edbd4dcd1607cf5291ced44853f9e11fd6fe6a39a4164e99e4c5007967059fcbd64ca89a03e807de4ab9b3cbee308d7ea9');"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">September 2017</div>
+          <h3>Expanding Horizons</h3>
+          <p>Growing beyond traditional philosophy to explore contemporary topics like the Biology of Love, attracting larger audiences.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-image" style="background-image: url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-5TwRSCnGv9/83e4b1e9d88e13ea111a8cb6458c5b5dc8703413a39fcc2f953a678ec2aebe313a10d9da7b727826a6f242facdd393623062dfeca38c68cf5851c8e726c5c67822f726d40fd0b828c5d5c620edbc569451d88fcc563991980777ddabc627167041dbee7a');"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2018</div>
+          <h3>Tackling Divisive Issues</h3>
+          <p>Addressing controversial contemporary topics like nationalism, veganism, and cultural identity with nuance and depth.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-image" style="background-image: url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-HMRDm1rBX_/cd3161435814ae479f91f5aa894b530cc677dedc0d6c406d2f954e79df7355bc1b653ed2dcb24f25f31f1c94a31fd55fd2c4864d113a689607bbd7ddba4c525f9bcfcd7e9ab51595f95140ab06c8a4bfde81b1f79494ee951eefc685a5b531334db151f3');"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2018-2024</div>
+          <h3>Global Expansion</h3>
+          <p>Taking our mission across Asia and beyond, hosting events in Singapore, Thailand, Zimbabwe, and more.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="topics-archive">
+  <div class="container">
+    <h2>Topics We've Explored</h2>
+    <p class="archive-intro">From consciousness to comedy, polyamory to psychedelics, we've fearlessly tackled the ideas that shape our world and divide our communities.</p>
+    
+    <div class="topics-cloud">
+      <span class="archive-topic">Consciousness</span>
+      <span class="archive-topic">Polyamory</span>
+      <span class="archive-topic">Toxic Masculinity</span>
+      <span class="archive-topic">Sex Work</span>
+      <span class="archive-topic">Comedy</span>
+      <span class="archive-topic">Cultural Appropriation</span>
+      <span class="archive-topic">Free Will</span>
+      <span class="archive-topic">Conspiracy Theories</span>
+      <span class="archive-topic">Artificial Intelligence</span>
+      <span class="archive-topic">Psychedelics</span>
+      <span class="archive-topic">Antinatalism</span>
+      <span class="archive-topic">Veganism</span>
+      <span class="archive-topic">Nationalism</span>
+      <span class="archive-topic">Sexual Orientation</span>
+      <span class="archive-topic">Dating & Consent</span>
+      <span class="archive-topic">Albert Ellis</span>
+      <span class="archive-topic">Noam Chomsky</span>
+      <span class="archive-topic">Nietzsche</span>
+      <span class="archive-topic">East vs West Psychology</span>
+    </div>
+  </div>
+</section>
+
+<section class="cities-visited" style="background-image: linear-gradient(rgba(26, 26, 46, 0.85), rgba(26, 26, 46, 0.85)), url('https://codahosted.io/docs/u41r59VdhB/blobs/bl-VkVTU82oKs/6');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;">
+  <div class="container">
+    <h2>Where We've Been</h2>
+    <p class="cities-intro">Our philosophical journey has taken us across continents, building communities of curious minds in diverse cities.</p>
+    
+    <div class="cities-list">
+      <div class="city-item">
+        <h3>Hanoi, Vietnam</h3>
+        <p>Our birthplace and spiritual home</p>
+      </div>
+      <div class="city-item">
+        <h3>Harare, Zimbabwe</h3>
+        <p>Bringing philosophy to Africa</p>
+      </div>
+      <div class="city-item">
+        <h3>Singapore</h3>
+        <p>Southeast Asia's intellectual hub</p>
+      </div>
+      <div class="city-item">
+        <h3>Saigon, Vietnam</h3>
+        <p>Southern expansion</p>
+      </div>
+      <div class="city-item">
+        <h3>Da Nang, Vietnam</h3>
+        <p>Coastal conversations</p>
+      </div>
+      <div class="city-item">
+        <h3>Chiang Mai, Thailand</h3>
+        <p>Mountain philosophy</p>
+      </div>
+      <div class="city-item">
+        <h3>Bali, Indonesia</h3>
+        <p>Island discussions</p>
+      </div>
+      <div class="city-item">
+        <h3>Koh Phangan, Thailand</h3>
+        <p>Paradise debates</p>
+      </div>
+      <div class="city-item">
+        <h3>Pai, Thailand</h3>
+        <p>Remote reflections</p>
+      </div>
+      <div class="city-item">
+        <h3>Online</h3>
+        <p>Global digital gatherings</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="evolution-story">
+  <div class="container">
+    <h2>Our Evolution</h2>
+    <div class="evolution-content">
+      <div class="evolution-phase">
+        <h3>March 2017: The Book Club</h3>
+        <p>We started as the Hanoi Philosophy Forum, a simple book club tucked away in the back room of a cafe. Guests attended for free, and everyone was a volunteer. We focused exclusively on exploring conventional academic philosophers.</p>
+      </div>
+      
+      <div class="evolution-phase">
+        <h3>Incorporating Lectures</h3>
+        <p>We quickly recognized that most guests arrived without completing readings, hopelessly confused. So we asked volunteers to prepare accessible presentations breaking down complex philosophical concepts. Guests loved the accessibility and the opportunity to ask questions.</p>
+      </div>
+      
+      <div class="evolution-phase">
+        <h3>Growing Beyond</h3>
+        <p>Within weeks, we outgrew our back room and moved upstairs. By July 2017, we needed even more space and relocated to Bluebirds' Nest, gaining new technology and the ability to facilitate better small-group discussions.</p>
+      </div>
+      
+      <div class="evolution-phase">
+        <h3>Today: Thought Jam</h3>
+        <p>We've evolved from a philosophy book club into an immersive experience combining rigorous discourse with live music, interactive games, and commissioned artwork. We're no longer just studying philosophy—we're living it, creating it, and making it accessible to everyone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="archive-cta">
+  <div class="container">
+    <h2>Be Part of Our Future</h2>
+    <p>Eight years of conversations. Hundreds of events. Thousands of guests. And we're just getting started.</p>
+    <div class="cta-buttons">
+      <a href="/thought-jam/eventsupcoming" class="btn btn-primary">Attend Our Next Event</a>
+      <a href="/thought-jam/gallery" class="btn btn-secondary-light">View Photo Gallery</a>
+    </div>
+  </div>
+</section></body></html>
