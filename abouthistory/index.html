@@ -806,6 +806,26 @@ section h2 {
   letter-spacing: -0.5px;
 }
 
+.phase-image {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.phase-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%);
+}
+
+.timeline-phase:hover .phase-image img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
 .phase-content p {
   font-size: 1.15rem;
   line-height: 1.8;
@@ -977,6 +997,10 @@ section h2 {
     font-size: 1.6rem;
   }
   
+  .phase-image img {
+    height: 250px;
+  }
+  
   .phase-content p {
     font-size: 1.05rem;
   }
@@ -1005,6 +1029,10 @@ section h2 {
   
   .history-photo img {
     height: 250px;
+  }
+  
+  .phase-image img {
+    height: 200px;
   }
   
   .transform-before,
@@ -1042,6 +1070,9 @@ section h2 {
           <span class="phase-year">March 2017</span>
           <h3>The First Event</h3>
         </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-MCG_KkHitl/86ef38fd894cd45d6586d4c078d80baf1457f9c97195cc8d30303ec79f603bed8fa37669a2c912244117d1dddc010344b49b5b32b3f4020d795a23c438cb33aaaa706dac7a017698735743f524a7b23e7cebfb05d4d369f65017223091505ac59ceb1d35" alt="Early philosophy discussion, March 2017">
+        </div>
         <div class="phase-content">
           <p>The Hanoi Philosophy Forum hosted its first event on March 3, 2017. A philosophy book club focused on conventional academic thinkers. Free admission. All volunteers. Pure experimentation.</p>
         </div>
@@ -1051,6 +1082,9 @@ section h2 {
         <div class="phase-header">
           <span class="phase-year">April 2017</span>
           <h3>The Accessibility Problem</h3>
+        </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-cxTpVEaATs/d9f89b805fc3b5881e0c41b8e2fd76e0659591d4a5ba0ae5d4c83e5a318457766dcffb64cb0f64bc513ecc4cbace387393b4a1879db73569e10599cf4c7205abf19e1c32ce2c178a5284426bb3ff5f16b22814e00990716b7365b36037a6348b18d601d7" alt="Engaged audience during early sessions">
         </div>
         <div class="phase-content">
           <p>Within weeks, we discovered a critical issue: most attendees arrived without completing the suggested readings. They were unprepared, confused, and the conversations suffered. Something had to change.</p>
@@ -1062,6 +1096,9 @@ section h2 {
           <span class="phase-year">May 2017</span>
           <h3>Introducing Lectures</h3>
         </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-cxTpVEaATs/d9f89b805fc3b5881e0c41b8e2fd76e0659591d4a5ba0ae5d4c83e5a318457766dcffb64cb0f64bc513ecc4cbace387393b4a1879db73569e10599cf4c7205abf19e1c32ce2c178a5284426bb3ff5f16b22814e00990716b7365b36037a6348b18d601d7" alt="Noam Chomsky event, May 2017">
+        </div>
         <div class="phase-content">
           <p>We began preparing and delivering presentations that broke down complex philosophical concepts, offering accessible contextualization. Guests loved it - they could ask questions, and they appreciated that presenters were learners, not experts. We explored Michel Foucault, Zhuangzi, Carl Jung, Arthur Schopenhauer, Simone de Beauvoir, and Noam Chomsky.</p>
         </div>
@@ -1071,6 +1108,9 @@ section h2 {
         <div class="phase-header">
           <span class="phase-year">July 2017</span>
           <h3>New Venue, New Technology</h3>
+        </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-uCnvSss6WN/c2187a1593717dfc97a7dd71e9848df1736b08abace5376fe668bd4943dcc1eecf2a3650bb2cd147c69e9e7e794d2a859b0a40edbd4dcd1607cf5291ced44853f9e11fd6fe6a39a4164e99e4c5007967059fcbd64ca89a03e807de4ab9b3cbee308d7ea9" alt="Bluebirds' Nest venue with new technology">
         </div>
         <div class="phase-content">
           <p>Outgrew our back room at Clickspace and moved to Bluebirds' Nest. For the first time, we had real technology: projector, projection screen, microphone, PA system. The experience became more professional, more polished.</p>
@@ -1082,6 +1122,9 @@ section h2 {
           <span class="phase-year">2018</span>
           <h3>Pivot to Contemporary Issues</h3>
         </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-5TwRSCnGv9/83e4b1e9d88e13ea111a8cb6458c5b5dc8703413a39fcc2f953a678ec2aebe313a10d9da7b727826a6f242facdd393623062dfeca38c68cf5851c8e726c5c67822f726d40fd0b828c5d5c620edbc569451d88fcc563991980777ddabc627167041dbee7a" alt="Nationalism event discussion, February 2018">
+        </div>
         <div class="phase-content">
           <p>We shifted from conventional philosophy to divisive contemporary issues. Veganism. Nationalism. Immigration. Gender identity. Suddenly, philosophy wasn't just about dead thinkers - it was about the conflicts tearing society apart right now.</p>
         </div>
@@ -1091,6 +1134,9 @@ section h2 {
         <div class="phase-header">
           <span class="phase-year">2019</span>
           <h3>Multimedia & Multifaceted</h3>
+        </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-_OxFn4elgj/b7704fad851ecf5029407f1e379c600fbed14627f122aeb0e2e84ce68eb4a4c8dec214b4cdf6f4eb518b27a5a1d2797afb7c313655aac5ceab7964f011fde45844d2e3d117731502b00cab82817c6145b44995d330649849a0f42c8fc72348f185e50a18" alt="Polyamory event with multimedia elements, March 2019">
         </div>
         <div class="phase-content">
           <p>Events evolved into multimedia experiences. Live music. Interactive games. Commissioned artwork. Panel discussions with experts. We weren't just teaching philosophy - we were entertaining while we educated.</p>
@@ -1102,6 +1148,9 @@ section h2 {
           <span class="phase-year">2020-2021</span>
           <h3>Going Global</h3>
         </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-HMRDm1rBX_/cd3161435814ae479f91f5aa894b530cc677dedc0d6c406d2f954e79df7355bc1b653ed2dcb24f25f31f1c94a31fd55fd2c4864d113a689607bbd7ddba4c525f9bcfcd7e9ab51595f95140ab06c8a4bfde81b1f79494ee951eefc685a5b531334db151f3" alt="Expansion to multiple cities">
+        </div>
         <div class="phase-content">
           <p>Expanded beyond Hanoi to Chiang Mai, Singapore, Da Nang, Bali, and online. The pandemic forced adaptation, but it also proved our model worked anywhere. Philosophy without borders.</p>
         </div>
@@ -1112,6 +1161,9 @@ section h2 {
           <span class="phase-year">2023-2024</span>
           <h3>Africa & Beyond</h3>
         </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-tLPF1Za9sL/dd5f4184adb1413de4449779963354c08f799dacbba5d428b3cd4385183b334428128f956c31641abcb4a6b0d8e406f107ea7e5e1dccc0f77cf7fcad45d927b8b45058a88d7f6b5095a3e5a6d80b3691bc93a3cb61ec9109e0e1d8cb7b84b8c28b7e19f1" alt="Launching in Harare, Zimbabwe">
+        </div>
         <div class="phase-content">
           <p>Launched in Harare, Zimbabwe, bringing our approach to new continents. Real Talk Philosophy became Thought Jam, reflecting our evolution from philosophy forum to cultural movement.</p>
         </div>
@@ -1121,6 +1173,9 @@ section h2 {
         <div class="phase-header">
           <span class="phase-year">2025</span>
           <h3>Today</h3>
+        </div>
+        <div class="phase-image">
+          <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-E-qXs62uZX/077e9390da7fa9f5ae3f071c4a636264114a772406e9a89d58c7377874dbe3a43411da82de4c36de0661db04a90f24b11ea0e18d1cd73beb5823ef3fa21def662d59553a0b9deb1ad782f520513a3fbfa1da44759169d4fcdb2933e6e2723033efdeee65" alt="Current global community">
         </div>
         <div class="phase-content">
           <p>239 events. 8,488 guests. 11 cities across 3 continents. From a back-room book club to the most entertaining way to explore divisive issues. The journey continues.</p>
@@ -1133,7 +1188,7 @@ section h2 {
 <section class="visual-history">
   <div class="container">
     <h2>Captured Moments</h2>
-    <p class="visual-intro">A glimpse at our early days, when we were still figuring out what we could become.</p>
+    <p class="visual-intro">Years of evolution, captured in photographs. From intimate book clubs to global events.</p>
     <div class="history-gallery">
       <div class="history-photo">
         <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-MCG_KkHitl/86ef38fd894cd45d6586d4c078d80baf1457f9c97195cc8d30303ec79f603bed8fa37669a2c912244117d1dddc010344b49b5b32b3f4020d795a23c438cb33aaaa706dac7a017698735743f524a7b23e7cebfb05d4d369f65017223091505ac59ceb1d35" alt="Albert Ellis event, May 2017">
@@ -1175,6 +1230,27 @@ section h2 {
         <div class="photo-caption">
           <span class="photo-title">Polyamory</span>
           <span class="photo-date">March 13, 2019</span>
+        </div>
+      </div>
+      <div class="history-photo">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-tLPF1Za9sL/dd5f4184adb1413de4449779963354c08f799dacbba5d428b3cd4385183b334428128f956c31641abcb4a6b0d8e406f107ea7e5e1dccc0f77cf7fcad45d927b8b45058a88d7f6b5095a3e5a6d80b3691bc93a3cb61ec9109e0e1d8cb7b84b8c28b7e19f1" alt="Harare Zimbabwe event, August 2024">
+        <div class="photo-caption">
+          <span class="photo-title">Harare Expansion</span>
+          <span class="photo-date">August 15, 2024</span>
+        </div>
+      </div>
+      <div class="history-photo">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-07Hx5wekLg/5b03a425ed0c9365e635da6dc8d92b91acf30cdd724b9ff677b3d6de6e3fb49965e2662caaed88a2fc19dddc56ca6d7e2687b799674a4d81aad0e47fa2bada7021400b879d68628e1cec4dc1aaded08a93b0ce0c2908e27ffacfa4ce6fe19a832f3a4438" alt="Community gathering in Zimbabwe">
+        <div class="photo-caption">
+          <span class="photo-title">Global Community</span>
+          <span class="photo-date">August 15, 2024</span>
+        </div>
+      </div>
+      <div class="history-photo">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-Ko_UYqRuy6/6a1aeb59c54dd11e9d0d920f4057454750a267dab61d02643e3c73b0492c4d017901761a1d5e689ec8c9f804f3b0a3975236e6681eed096191af3f8229f16ceba161fe8ee45b1ba393aa8cbab8e98bd92af7d410185ead4b24b7d2cb122ec189af9ae485" alt="Growing community in Africa">
+        <div class="photo-caption">
+          <span class="photo-title">African Chapter</span>
+          <span class="photo-date">August 15, 2024</span>
         </div>
       </div>
     </div>
