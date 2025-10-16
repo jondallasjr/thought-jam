@@ -1,2 +1,367 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Thought Jam — Real Talk Philosophy, Reimagined</title><style>/* Thought Jam — Real Talk Philosophy, Reimagined - Page CSS */
-.tj-wrap{max-width:1100px;margin:0 auto;padding:4rem 1.25rem}.tj-hero{background:radial-gradient(1200px 500px at 50% -100px,rgba(43,92,230,.15),transparent) #0b0c10;color:#fff;text-align:center;padding:7rem 1.25rem 4rem}.tj-hero .tj-wrap{padding:0}.tj-kicker{letter-spacing:.06em;text-transform:uppercase;opacity:.8;margin:0 0 .5rem}.tj-sub{max-width:760px;margin:0 auto 1.5rem;opacity:.95}.tj-cta{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin:1.25rem 0 2rem}.tj-btn{display:inline-block;padding:.7rem 1rem;border:1px solid currentColor;border-radius:.6rem;text-decoration:none;font-weight:600}.tj-btn--primary{background:#fff;color:#0b0c10;border-color:#fff}.tj-stats{display:flex;gap:2rem;justify-content:center;list-style:none;padding:0;margin:2rem 0 0}.tj-stats li{display:grid;gap:.15rem}.tj-stats strong{font-size:1.6rem;line-height:1}.tj-section{background:#fff}.tj-alt{background:#f7f8fb}.tj-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.tj-grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.tj-card{background:#fff;border:1px solid #e7e8ee;border-radius:.8rem;padding:1.1rem}.tj-h{margin:.2rem 0 0.6rem}.tj-link{display:inline-block;margin-top:.4rem;text-decoration:none;font-weight:600}.tj-listquotes{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}.tj-listquotes li{background:#ffffff;border:1px solid #e7e8ee;border-radius:.8rem;padding:1rem}.tj-listquotes blockquote{margin:0 0 .35rem;font-size:1.05rem}.tj-quick{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}.tj-fineprint{background:#fafbfe;padding-top:2rem;padding-bottom:2.5rem}.tj-hero a.tj-btn{color:#0b0c10}@media (max-width:900px){.tj-grid3{grid-template-columns:1fr 1fr}.tj-stats{gap:1.25rem}}@media (max-width:640px){.tj-grid3,.tj-grid2{grid-template-columns:1fr}.tj-hero{padding:5rem 1rem 3rem}.tj-stats strong{font-size:1.3rem}}</style></head><body><section class="tj-hero"><div class="tj-wrap"><p class="tj-kicker">Real Talk Philosophy, since 2017</p><h1>Thought Jam</h1><p class="tj-sub">Interactive, impartial salons on today’s most divisive questions — with music, art, games, and facilitated small-group dialogue.</p><div class="tj-cta"><a class="tj-btn tj-btn--primary" href="/thought-jam/events">See events</a><a class="tj-btn" href="/thought-jam/get-involved">Get involved</a></div><ul class="tj-stats" aria-label="Impact stats"><li><strong>239</strong><span>events</span></li><li><strong>8,488</strong><span>guests</span></li><li><strong>11</strong><span>cities</span></li></ul></div></section><section class="tj-section"><div class="tj-wrap tj-grid3"><article class="tj-card"><h2 class="tj-h">The Vibe</h2><p>Underground art gallery meets philosophical salon. Big ideas, respectful debate, sensory details, zero stuffiness.</p><a class="tj-link" href="/thought-jam/about">About the experience →</a></article><article class="tj-card"><h2 class="tj-h">Pick a Topic</h2><p>Masculinity, veganism, pronouns, immigration — steelmanned from all sides with tools for real-world dialogue.</p><a class="tj-link" href="/thought-jam/topics">Explore topics →</a></article><article class="tj-card"><h2 class="tj-h">Join the Community</h2><p>Volunteer, host a Jam, or partner. Help depolarize conversations — joyfully.</p><a class="tj-link" href="/thought-jam/get-involved">Ways to help →</a></article></div></section><section class="tj-section tj-alt"><div class="tj-wrap"><h2 class="tj-h">What people say</h2><ul class="tj-listquotes"><li><blockquote>“Your efforts are truly exemplary.”</blockquote><cite>— Alain de Botton, The School of Life</cite></li><li><blockquote>“Engaging, mind-boggling, and ridiculously fun.”</blockquote><cite>— Tố Lê, Hollins University</cite></li><li><blockquote>“Beautifully articulated. Overloaded with useful information.”</blockquote><cite>— Mae Constance, Yoga with Mae</cite></li><li><blockquote>“One of my favorite weekly events.”</blockquote><cite>— Stephanie Lily, Columnist</cite></li></ul><a class="tj-link" href="/thought-jam/testimonials">Read more testimonials →</a></div></section><section class="tj-section"><div class="tj-wrap tj-grid2"><article class="tj-card"><h2 class="tj-h">Upcoming & Recent</h2><p>Find the next Jam or browse recent recaps and resources.</p><div class="tj-cta"><a class="tj-btn tj-btn--primary" href="/thought-jam/events">Events</a><a class="tj-btn" href="/thought-jam/resources">Resources</a></div></article><article class="tj-card"><h2 class="tj-h">Newsletter</h2><p>Short, useful briefs on hot-button issues + new event drops.</p><a class="tj-btn" href="/thought-jam/newsletter">Subscribe →</a></article></div></section><section class="tj-section tj-fineprint"><div class="tj-wrap"><nav class="tj-quick"><a href="/thought-jam/about">About</a><a href="/thought-jam/faq">FAQ</a><a href="/thought-jam/contact">Contact</a><a href="/thought-jam/donate">Donate</a><a href="/thought-jam/legal">Legal</a></nav></div></section></body></html>
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Thought Jam - Social Philosophy Forum</title><style>/* Thought Jam - Social Philosophy Forum - Page CSS */
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  padding: 120px 20px 80px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  opacity: 0.85;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #e94560;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #d63651;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(233, 69, 96, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #1a1a2e;
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #1a1a2e;
+}
+
+.mission {
+  background-color: #f8f9fa;
+}
+
+.mission p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.vibe-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vibe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.vibe-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e94560;
+}
+
+.vibe-card p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.gallery-preview {
+  background-color: #f8f9fa;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.image-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+.image-caption {
+  padding: 1rem;
+  background: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.gallery-link {
+  display: inline-block;
+  margin: 2rem auto 0;
+}
+
+.testimonials-preview {
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  color: #fff;
+}
+
+.testimonials-preview h2 {
+  color: #fff;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #e94560;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial cite {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-style: normal;
+}
+
+.cta-final {
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.cta-final h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-final p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn-secondary {
+  color: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+  
+  .vibe-grid,
+  .image-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}</style></head><body><section class="hero">
+  <div class="hero-content">
+    <h1>Thought Jam</h1>
+    <p class="hero-subtitle">Where Deep Dialogue Meets Creative Community</p>
+    <p class="hero-description">Since 2017, we've hosted 239 events for 8,488 guests across 11 cities, creating spaces where minds meet, ideas collide, and understanding flourishes.</p>
+    <div class="hero-cta">
+      <a href="/thought-jam/events" class="btn btn-primary">Join an Event</a>
+      <a href="/thought-jam/about" class="btn btn-secondary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <p>We use the power of facilitated and contextualized intercultural dialogue to combat sociopolitical polarization and heal societal divides. Through fun, interactive, multimedia events, we explore the nuanced science, theory, and emotion of today's most divisive issues from all perspectives.</p>
+  </div>
+</section>
+
+<section class="the-vibe">
+  <div class="container">
+    <h2>The Experience</h2>
+    <div class="vibe-grid">
+      <div class="vibe-card">
+        <h3>Deep Conversations</h3>
+        <p>No small talk here. Our skilled facilitators ignite passionate, respectful debates where every voice is heard and valued. It's a safe space to voice controversial opinions and be genuinely heard.</p>
+      </div>
+      <div class="vibe-card">
+        <h3>Art & Creativity</h3>
+        <p>From live music and spoken word to interactive installations, your senses feast on creativity that complements the mental stimulation. Think underground art gallery meets philosophical salon.</p>
+      </div>
+      <div class="vibe-card">
+        <h3>Intellectual Playground</h3>
+        <p>Collaborative games flip your assumptions upside down. Surprise elements keep you on your intellectual toes. Every event is designed to challenge perception and spark creative thinking.</p>
+      </div>
+      <div class="vibe-card">
+        <h3>Community</h3>
+        <p>A melting pot of curious minds from all walks of life. Feel the electrifying buzz of ideas colliding and evolving. Many attendees forge deep friendships through these shared intellectual adventures.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-preview">
+  <div class="container">
+    <h2>Moments from Our Events</h2>
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-_OxFn4elgj/b7704fad851ecf5029407f1e379c600fbed14627f122aeb0e2e84ce68eb4a4c8dec214b4cdf6f4eb518b27a5a1d2797afb7c313655aac5ceab7964f011fde45844d2e3d117731502b00cab82817c6145b44995d330649849a0f42c8fc72348f185e50a18" alt="Polyamory discussion in Hanoi, Vietnam">
+        <p class="image-caption">Hanoi, Vietnam - 2019</p>
+      </div>
+      <div class="image-card">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-E-qXs62uZX/077e9390da7fa9f5ae3f071c4a636264114a772406e9a89d58c7377874dbe3a43411da82de4c36de0661db04a90f24b11ea0e18d1cd73beb5823ef3fa21def662d59553a0b9deb1ad782f520513a3fbfa1da44759169d4fcdb2933e6e2723033efdeee65" alt="Philosophy discussion in Harare, Zimbabwe">
+        <p class="image-caption">Harare, Zimbabwe - 2024</p>
+      </div>
+      <div class="image-card">
+        <img src="https://codahosted.io/docs/u41r59VdhB/blobs/bl-nKtZOsp8M1/64d543157581c431c08c57035f43b6da0c2ed54d4210ba98db23c6960c24d836e5d7ab3f832542a64234aaa970767331de2228f7c7e13e7c58b6ed3f47530896ffd4409808ddd5abcc6b53390e580d4229b8b930cb13aad872d7050f655ca8611e019c40" alt="Event in Chiang Mai, Thailand">
+        <p class="image-caption">Chiang Mai, Thailand - 2020</p>
+      </div>
+    </div>
+    <a href="/thought-jam/gallery" class="btn btn-secondary gallery-link">View More Photos</a>
+  </div>
+</section>
+
+<section class="testimonials-preview">
+  <div class="container">
+    <h2>What People Say</h2>
+    <div class="testimonial-grid">
+      <blockquote class="testimonial">
+        <p>"Your efforts are truly exemplary."</p>
+        <cite>Alain de Botton, Founder, The School of Life</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"Absolutely every minute that I've been fortunate enough to be present in has been engaging and mind-boggling and ridiculously fun."</p>
+        <cite>Tố Lê, Hollins University</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"The perspectives that RTP is able to gather under one roof are incredible and guiding questions help bring them out in the most productive and interesting discussions."</p>
+        <cite>Tố Lê</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"I truly think this Philosophy Forum is a necessary space in a society like Hanoi/Vietnam, where social and political curiosity are not popularized among us young generations."</p>
+        <cite>Dam Duc</cite>
+      </blockquote>
+    </div>
+    <a href="/thought-jam/testimonials" class="btn btn-secondary">Read More Testimonials</a>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <h2>Join the Conversation</h2>
+    <p>Be part of a community that values deep thinking, respectful dialogue, and genuine human connection.</p>
+    <div class="cta-buttons">
+      <a href="/thought-jam/events" class="btn btn-primary">Upcoming Events</a>
+      <a href="/thought-jam/get-involved" class="btn btn-secondary">Get Involved</a>
+      <a href="/thought-jam/newsletter" class="btn btn-secondary">Subscribe to Newsletter</a>
+    </div>
+  </div>
+</section></body></html>
