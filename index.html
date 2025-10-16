@@ -1,0 +1,432 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Thought Jam — Real Talk Philosophy, Reimagined</title><style>/* Thought Jam — Real Talk Philosophy, Reimagined - Page CSS */
+/* Hero Section */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: white;
+  color: #667eea;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border-color: white;
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Stats Section */
+.stats {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Mission Section */
+.mission {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.mission-intro {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.mission p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.8;
+}
+
+/* Vibe Section */
+.vibe {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #f8f9fa, white);
+}
+
+.vibe-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.vibe-item {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vibe-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.vibe-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.vibe-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.vibe-item p {
+  color: #6c757d;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Testimonials Preview */
+.testimonials-preview {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.testimonials-preview h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 3rem;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.testimonials-grid {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  margin: 0;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.testimonial cite {
+  display: block;
+  font-style: normal;
+  color: #6c757d;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.testimonials-cta {
+  text-align: center;
+}
+
+.link-arrow {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.link-arrow:hover {
+  color: #764ba2;
+  transform: translateX(5px);
+  display: inline-block;
+}
+
+/* Final CTA Section */
+.cta-final {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-final h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.cta-final p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .vibe-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}</style></head><body><section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Philosophy. Reimagined.</h1>
+    <p class="hero-subtitle">Where underground art gallery meets philosophical salon. Join us for electrifying discussions that challenge minds and build community.</p>
+    <div class="hero-cta">
+      <a href="/thought-jam/events" class="btn btn-primary">Explore Events</a>
+      <a href="/thought-jam/get-involved" class="btn btn-secondary">Get Involved</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-container">
+    <div class="stat-item">
+      <div class="stat-number">239</div>
+      <div class="stat-label">Events Hosted</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">8,488</div>
+      <div class="stat-label">Curious Minds</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">11</div>
+      <div class="stat-label">Cities Worldwide</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">2017</div>
+      <div class="stat-label">Since</div>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="mission-content">
+    <h2>Real Talk on the Issues That Matter</h2>
+    <p class="mission-intro">We create fun, interactive, multimedia community events that impartially explore all sides of contemporary divisive issues—from masculinity and veganism to gender pronouns and immigration.</p>
+    <p>Through facilitated small-group discussions, impartial lectures, themed music, artwork, games, and panelist Q&As, we use the power of contextualized intercultural dialogue to combat sociopolitical polarization and heal societal divides.</p>
+  </div>
+</section>
+
+<section class="vibe">
+  <div class="vibe-grid">
+    <div class="vibe-item">
+      <div class="vibe-icon">💭</div>
+      <h3>Deep Conversations</h3>
+      <p>No small talk here. Our skilled facilitators ignite passionate, respectful debates where every voice is heard and valued.</p>
+    </div>
+    <div class="vibe-item">
+      <div class="vibe-icon">🎨</div>
+      <h3>Art & Music</h3>
+      <p>Live music, spoken word artists, and interactive installations complement the mental stimulation for full sensory immersion.</p>
+    </div>
+    <div class="vibe-item">
+      <div class="vibe-icon">🧩</div>
+      <h3>Intellectual Playground</h3>
+      <p>Collaborative games flip your assumptions upside down while surprise elements keep you on your intellectual toes.</p>
+    </div>
+    <div class="vibe-item">
+      <div class="vibe-icon">🤝</div>
+      <h3>Community</h3>
+      <p>A melting pot of curious minds from all walks of life, forging deep friendships through shared intellectual adventures.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-preview">
+  <h2>What People Are Saying</h2>
+  <div class="testimonials-grid">
+    <blockquote class="testimonial">
+      <p>"Your efforts are truly exemplary."</p>
+      <cite>— Alain de Botton, Founder, The School of Life</cite>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"Absolutely every minute has been engaging, mind-boggling, and ridiculously fun."</p>
+      <cite>— Tố Lê, Hollins University Student</cite>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"What a lovely freaking community I have stumbled into. Loving ya'll!"</p>
+      <cite>— Bronwyn MacLeod</cite>
+    </blockquote>
+  </div>
+  <div class="testimonials-cta">
+    <a href="/thought-jam/testimonials" class="link-arrow">Read more testimonials →</a>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-content">
+    <h2>Ready to Challenge Your Thinking?</h2>
+    <p>Join us for an unforgettable night of discovery where big ideas meet even bigger questions.</p>
+    <div class="cta-buttons">
+      <a href="/thought-jam/events" class="btn btn-primary">Find an Event</a>
+      <a href="/thought-jam/newsletter" class="btn btn-outline">Subscribe to Newsletter</a>
+    </div>
+  </div>
+</section></body></html>
